@@ -1,0 +1,44 @@
+.flex{
+    display: flex;                  /* for_all_header_links_in_one_line*/
+}
+.items-center{
+    align-items: center;            /* for_all_header_links_into_center */
+}
+.justify-between{
+    justify-content: space-between; /* spacce_bet_leftlinks_rightlinks */
+}
+.btn{
+    padding:0.8rem 3rem;            /* contact-button_top-bottom_and_left-right_space */
+    font-size:1rem;                 /* contact_font_size */
+    font-weight: 600;               /* for_bold_text */
+    border: 2px solid transparent;  /* for_border */
+    outline: none;
+    cursor: pointer;                /* for_cursor_pointer */
+    text-transform: uppercase;      /* upper-case */
+    transition: all .3s ease;       /* for_smoth_animation */
+}
+.btn-primary{
+    background:var(--primary);      /* change_contact_BG-color */
+    color: var(--secondary);        /* change_contact_color */
+}
+.btn-primary:hover{
+    background: transparent;        /* BG_color */
+    border-color: var(--primary);   /* border_color */
+    color: var(--primary);          /* contact_name_color */
+}
+.btn-secondary{                     /* all changes in download cv button */
+    background: transparent;        
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-secondary:hover{               /* animation for button */
+    background: var(--primary);
+    color: var(--secondary);
+}
+.flex-1{                            /* space betw img and all text */
+    flex: 1;
+}
+.justify-center{
+    justify-content: center;        /* img in center */
+}
+
