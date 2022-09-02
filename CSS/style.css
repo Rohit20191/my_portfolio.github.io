@@ -1,0 +1,740 @@
+@import 'utilities.css';               /* for_uses_of_multiple_flexboxes*/
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --secondary:#070606;
+}
+body{
+    /* height: 8000px;    after comp my work it is removed           for main page height  */ 
+    font-family: 'Poppins',sans-serif;  /* sans-serif--for_backup_our_font*/
+}
+html{
+    scroll-behavior: smooth;            /* for smooth scrol */
+}
+*{
+    padding: 0;                         /* to_remove_default_space */
+    margin: 0;                          /* to_remove_default_space */
+    box-sizing: border-box;
+    -webkit-font-smotthing:antialiased; /* for_font_smotthing*/
+}
+header{
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%); /* each block(0,0) for each side */
+}
+.container{                    /* this is for computers */
+    max-width: 1152px;         /* to_put_header_to_center*/
+    padding:0 1px;            /* to_put_header_to_center*/
+    margin:0 auto;             /* to_put_header_to_center*/
+    
+}
+/* #main-nav{
+    position: sticky;
+    top:0;
+} */
+@media (min-width: 576px){     /* for mobile */
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){    /* for tablate screen */
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){   /* small laptops screen */
+    .container{
+        max-width: 1152px;
+    }
+}
+
+header nav .left a{
+    color:var(--pure);         /* to_change_link_colour*/
+    text-decoration: none;     /* to_underline_of_link*/
+    margin-right: 2rem;        /* space_bet_2-adjcent-links */
+    text-transform: uppercase; /* upper-case */
+    transition: all .3s ease;  /* for_smoth_animation */
+    font-size: 20px;
+}
+header nav .left a:hover{
+    color: var(--primary);     /* put_cursor_on-link_It's-color_change */
+}
+header nav{
+    padding:2rem 0;        /* header_only_top-bottom_space_left-right_zero */
+}
+
+header nav .branding{
+    margin-right: 3rem;    /* space_bet_logo_and_left-links */
+}
+.hero{
+    padding: 3rem 0;       /* space betw polygon and all text */
+}
+.hero .left img{
+    width: 400px;          /* decrese img width */
+}
+.hero .right{
+    color: var(--pure);    /* white color for all element */
+}
+.hero .right h6{           /* Rohit Dhumal */
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.hero .right h1{           /* I'am creative */
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+} 
+.hero .right h1 span{      /* Designer */
+    color: var(--primary);
+}
+.hero .right p{            /* for paragraph */
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+.hero .right{
+    margin-top: -7rem;     /* all text push upword */
+}
+#n1{
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+}
+
+
+
+                  /* Heading End */
+
+section{
+    padding: 6rem 0;           /* space betw header and next section */
+}  
+section.about .about-me-img{
+    height: 450px;             /* reduce img height */
+} 
+section.about h1{              /* edit "About Me" */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+}     
+section.about h1 span{         /* color of ME */
+    color: var(--primary);
+}    
+section.about h3{              /* hello i'am rohit dhumal */
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about p{               /* for Paragraph */
+    font-family: 'lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 19px;
+}
+section.about .social{         /* for social icons */
+    display: flex;
+}
+section.about .social a{       /* for social icon */
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    transition: all .3s ease;
+}
+section.about .social a:hover{  /* for social icon */
+    background: var(--primary);
+}
+section.about .social a img{    /* for social icon */
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+}
+  
+                               /* About Section is End here */                                  
+                                /* seevices == My Skills*/
+.section-heading{               /* services section is start */
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    font-size: 2rem;
+}
+.section-heading span{
+    color: var(--primary);
+}
+.section-heading + p{         /* our services chya khalil para */
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 8rem;      /* gap btew our services and cards */
+    text-align: center;
+    font-size: 20px;
+}
+section.services{
+    background: var(--light);  /* for light background */
+}
+section.services .card-wrapper{   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  /* for 3 * 3 matrix */
+    column-gap: 2rem;                      /* gap betw 2 adjecent cards =cols-wise */
+    row-gap: 6rem;                         /* gap betw 2 adjecent cards =rows-wise */
+}
+section.services .card-wrapper .card{
+    background: var(--pure);
+    padding: 3rem 2rem;
+    position: relative;                    /* card imgs relative to cards */
+    padding-top: 5rem;                     /* space betw card img and card text */
+    text-align: center;                    /* all card text in center */
+    transition: all .3s ease;              /* slow hover */
+}
+section.services .card-wrapper .card img{  /* for card img align to center and above the cards */
+    position:absolute;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section.services .card-wrapper .card h2{  /* card text heading */
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    
+}
+section.services .card-wrapper .card p{   /* card para */
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height: 1.6;                     /* space betw 2 lines */
+    font-size: 19px;
+}
+section.services .card-wrapper .card:hover{
+    background: var(--dark);              /* black bg when cursor is on it */
+}
+section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+    color: var(--pure);                   /* white text color when cursor is on it */
+}
+section.services .card{
+    background-color: var(--primary);
+    padding: 0.6rem 0.5rem;
+}
+
+
+
+                                   /* Services Section is End here */
+                                   
+                                   /* freelancer Section is stsrt */
+
+section.freelancer{
+    text-align: center;                                             /* " .. " for we are in css so 1st we back from here */
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png); /* overlay wiht black BG and opacity(transperency) 0.7 */
+    color: var(--pure);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%); /* each block(0,0) for each side */
+    padding-bottom: 14rem;        /* gap betw button and img */
+}   
+section.freelancer h1{            /* I'am available ....*/
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;        /* space btew header and para */
+}   
+section.freelancer p{         
+    margin-bottom: 2rem;          /* space betw para and button */
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+} 
+
+
+                                   /*  freelancer Section is End */
+                                   /*  reviews section is start */
+
+section.reviews .slider .slide img{    /* reviews == My project */
+    width: 270px;
+    height: 270px;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
+    object-fit: cover;            /* for img never stretch */
+    margin-bottom: 2rem;          /* gap betw img and text */
+}
+section.reviews .slider .slide .img2{
+    clip-path: inset(0 0 0 0);
+}  
+section.reviews .slider .slide{ 
+    text-align: center;          /* all text in center */
+    display: flex;               /* all img and text in 1 line */
+    align-items: center;
+    flex-direction: column;      /* for img and text verticaly flex */
+    padding: 0 8rem;             /* reduce para width */
+} 
+section.reviews .slider .slide p{  /* para editing */
+    font-family: 'Lato',sans-serif;
+    color: var(--ternary);
+    margin-bottom: 1rem;
+    font-size: 18px;
+} 
+section.reviews .slider .slide span{
+    font-size: 1rem;
+}  
+section.reviews .slider-dots .dots{
+    list-style-type: none;       /* remove dots */ 
+    display: flex!important;     /* imp for override slick slider class */
+    justify-content: center;     /* for center */
+}  
+section.reviews .slider-dots{
+    margin-top: 3rem;            /* gap betw slider and text */
+}   
+section.reviews .slider-dots button{
+    font-size: 0;                /* remove no of slider */
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;        /* gap betw adjc sliders */
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;        /* for round border */
+    cursor: pointer;
+}  
+section.reviews .dots li.slick-active button{ 
+    background: var(--primary); /* highlight active button */
+    width: 20px;
+} 
+section.reviews .my-proj-para{
+    margin-bottom: 4rem;
+}
+section.reviews .slider .slide .m{
+    text-decoration: none;
+    color: var(--dark);
+    transition: all .3s ease;  /* for_smoth_animation */
+    
+}
+section.reviews .slider .slide .m:hover{
+    color: var(--primary);
+
+}
+
+
+
+                               /*  reviews section is End */
+                               /*  work section is start */ 
+
+section.work{
+    background: var(--light);               /* light bg */
+}
+section.work .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  /* for 3 * 3 matrix */
+    grid-gap: 2rem;                        /* gap betw 2 adjecent cards */
+}  
+section.work .card-wrapper .card{
+    position: relative;
+    height: 250px;                        /* height for cards */
+}  
+section.work .card-wrapper .card .overlay{ /* overlay for cards */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61,207,211,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;                /* categoery and web development in 1below 1 */
+    color: var(--light);
+    opacity: 0;
+    transition:all .3s ease;
+}   
+section.work .card-wrapper .card:hover .overlay{  
+    opacity: 1;                            /* when put cursor on card only that time overlay was display */
+}
+section.work .card-wrapper .card .overlay a{ /* color for link */
+    color: var(--secondary);
+    text-decoration: none;                 /* for remove under-line */
+}    
+section.work .card-wrapper .card img{      /* for match img height and width by card overlay */
+    height: 100%;  
+    width: 100%;
+}  
+
+
+                                         /*  work section is End */
+                                         /*  Bloga section is start */
+
+section.blog{
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%); /* each block(0,0) for each side */
+    padding-bottom: 12rem;
+}
+section.blog .section-heading{          /* white text */
+    color: var(--pure);
+}
+section.blog .card-wrapper{            /* for 3 * 3 matrix */
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 3rem;                   /* gap betw 2 adjecent cards */
+    margin-top: -2rem;
+}
+section.blog .card-wrapper .card{     /* text color white */
+    background: var(--pure);
+}
+section.blog .card-wrapper .card .img-wrapper img{ /* for any img use this for fiting */
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;               /* img should not be strech */
+}
+section.blog .card-wrapper .card .card-content{ 
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+section.blog .card-wrapper .card .card-content h1{ /* header editing */
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+section.blog .card-wrapper .card .card-content a{ 
+    color: var(--secondary);
+    text-decoration: none;          /* remove underline */
+}
+section.blog .card-wrapper .card .card-content a:hover{
+    color: var(--primary);          /* when put cursor on card only that time color is change */
+}
+section.blog .card-wrapper .card .card-content span{  /* date */
+    color: var(--ternary);     
+    font-size: 0.8rem;
+}
+section.blog .card-wrapper .card .card-content p{ /* para editing */
+    font-family: 'Lato',sans-serif;
+    color: var(--ternary);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+section.blog .card-wrapper .card .card-content a.read-more{ /* read more editing */
+    font-size: 0.8rem;
+}
+section.blog .card-wrapper .card .img-wrapper{
+    position: relative;
+    height: 208.6px;
+}
+section.blog .card-wrapper .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61,207,211,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    opacity: 0;
+    transition: all .3s ease;
+}
+section.blog .card-wrapper .card .overlay a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+section.blog .card-wrapper .card:hover .overlay{
+    opacity: 1;
+}
+
+
+                                     /*  Bloga section is End */
+                                     /* contact section is start from here */
+
+section.contact .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* for matrix form */
+    grid-gap: 3rem;
+}
+section.contact .card-wrapper .card{
+    text-align: center;              /* all text in center */
+}
+section.contact .card-wrapper .card img{ 
+    margin-bottom: 3rem;             /* btew img and text */
+    
+}
+section.contact .card-wrapper .card h1{ /* card header */
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+section.contact .card-wrapper .card h6{
+    font-size: 1rem;
+    color: var(--ternary);
+    font-weight: 400;                /* reduce font opacity */
+    margin-bottom: 4rem;             /* gap betw imgs and text boxes */
+}
+section.contact .input-wrap{
+    display: grid;                   /* for matrix form */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;          /* for flex  in cols direction */
+}
+section.contact .input-wrap-2 input{ /*bottom margin */
+    margin-bottom: 2rem;
+}
+section.contact input{               /* increse text box size */
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+    font-size: 0.9rem;
+}
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;                 /* when we start typing then gap betw text and border */
+    border: 1px solid var(--light);
+    font-size: 0.9rem;
+}
+section.contact .input-wrap-2 textarea:focus, section.contact input:focus{
+    outline: none;                  /* remove text-box outline when we click on it */
+}
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+section.contact .card-wrapper .card{
+    position: relative;
+}
+/* section.contact .card-wrapper .card .overlay1{
+    position: absolute;
+    top: 0;
+    left: 6rem;
+    width: 10rem;
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    opacity: 0;
+    transition: all .3s ease;
+    border: 5px solid var(--primary);
+    border-radius: 20%;
+    cursor: pointer;
+}
+section.contact .card-wrapper .card .overlay1 a{
+    
+
+    text-decoration: none;
+}
+section.contact .card-wrapper .card:hover .overlay1{
+    opacity: 1;
+} */
+
+ 
+
+
+                                   /* contact section is End */
+                                   /* footer section is start */
+
+footer{
+    background: var(--dark);
+    text-align: center;
+    padding: 5rem 0;              /* black color padding */
+}       
+footer .footer-logo{
+    margin-bottom: 3rem;
+    width:150px;
+}     
+footer .footer-socials a{         /* space betw adjecent social-logo */
+    margin-right: 1rem;
+}
+footer .footer-socials{
+    margin-bottom: 3rem;
+    margin-right: -1rem;
+}   
+footer .copyright{
+    color: var(--ternary);
+}      
+#n5{
+    border: 7px solid var(--primary);
+    border-radius: 50%;
+}
+
+
+                                  /* footer section is end */
+                                  /* mobile view section is start */
+
+ 
+.site-main-wrapper{
+    position: relative;
+}   
+.hamberger{
+    position:absolute;
+    top: 40;
+    left: 30px;
+    z-index: 11;                  /* for show front side */
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}    
+.hamberger img{
+    padding-top: 2.7rem;
+    width: 30px;
+}  
+.mobile-nav{                      /* new nav-bar when width is below our condition */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--light);
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%); /* new nav-bar is move out of the screen */
+    transition: all .5s ease-in-out; /* animation for new nav-bar */
+} 
+.open{
+    transform: translateX(0);    /* click on hamberger nav-bar gain its original position */
+}     
+.times{                            /* for cross button when nav-bar is open */
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}  
+.times img{
+    width: 30px;
+}    
+
+.mobile-nav ul{                  /* remove dots of  nav-bar */
+    list-style-type: none;
+}
+.mobile-nav ul li a{             /* new nav-bar editing */
+    text-decoration: none;       /* remove under-line */
+    text-transform: uppercase;
+    color:var(--dark);         /* to_change_link_colour*/
+    text-decoration: none;     /* to_underline_of_link*/
+    text-transform: uppercase; /* upper-case */
+    transition: all .3s ease;  /* for_smoth_animation */
+    font-size: 20px;
+}  
+.mobile-nav ul li a:hover{
+    color: var(--primary);
+}
+.mobile-nav ul li img{
+    background: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+@media (max-width:1024px){        /* width below 1024 then hide navigs. */
+    header #main-nav{
+        display: none;
+    }
+    .hamberger{
+        display: block;
+    }
+    .hero.left img{
+        width: 260px;
+    }
+    .hero.right h1{
+        font-size: 3rem;
+    }
+    .hero{
+        padding: 10rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 89%, 0 100%);
+    }
+    section.about .about-me-img{
+        height: 360px;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.blog{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 97%, 0 100%);
+    }
+} 
+
+@media (max-width:576px){
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        top: 260px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    }
+    .hero .left{
+        margin-top: -5rem;
+        margin-right: -9rem;
+        padding-bottom: 4rem;
+       
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .about .right .social{
+        justify-content: center;
+    }
+    section{
+        padding: 4rem 0;
+    }
+    section.services .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 7rem;
+    }
+    section.freelancer h1{
+        line-height: 1.2;
+    }
+    section.freelancer{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+        padding-bottom: 8rem;
+    }
+    section.reviews .slider .slide{
+        padding: 0;
+    }
+    .section-heading + p{
+        margin-bottom: 3rem;
+    }
+    section.work .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .input-wrap{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+
+}
+
+
+                                   
+
+
+
+                  
+
+
+
