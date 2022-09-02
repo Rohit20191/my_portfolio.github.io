@@ -1,4 +1,4 @@
-@import 'utilities.css';               /* for_uses_of_multiple_flexboxes*/
+@import './utilities.css';               /* for_uses_of_multiple_flexboxes*/
 :root{
     --primary:#3DCFD3;
     --dark:#161616;
