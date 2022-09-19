@@ -264,6 +264,7 @@ section.reviews .slider .slide img{    /* reviews == My project */
 }
 section.reviews .slider .slide .img2{
     clip-path: inset(0 0 0 0);
+    width: fit-content;
 }  
 section.reviews .slider .slide{ 
     text-align: center;          /* all text in center */
